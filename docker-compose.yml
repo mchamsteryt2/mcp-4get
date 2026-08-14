@@ -1,0 +1,10 @@
+services:
+    mcp-4get:
+        image: ghcr.io/your-username/your-fork-name:latest
+        ports:
+            - 8000:8000
+        container_name: remote-mcp-4get
+        restart: unless-stopped
+        environment:
+            - FOURGET_URL=https://4get.ca
+        
