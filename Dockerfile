@@ -16,5 +16,5 @@ ENV FOURGET_URL=https://4get.ca
 # Expose the network port FastMCP is listening on
 EXPOSE 8000
 
-# Execute the script normally
-ENTRYPOINT ["python", "-m", "mcp-4get"]
+# FIX: Execute it directly out of the src layout folder
+ENTRYPOINT ["python", "src/main.py"]
