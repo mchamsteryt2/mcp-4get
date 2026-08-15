@@ -1,4 +1,5 @@
-FROM python:3.11-slim
+# Change from 3.11-slim to 3.13-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
@@ -16,5 +17,4 @@ ENV FOURGET_URL=https://4get.ca
 EXPOSE 8000
 
 # Execute the script normally
-ENTRYPOINT ["python", "-m", "mcp_4get"] 
-# (Adjust "mcp_4get" to the actual package run module defined in your pyproject.toml)
+ENTRYPOINT ["python", "-m", "mcp_4get"]
