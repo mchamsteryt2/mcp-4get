@@ -17,4 +17,4 @@ ENV FOURGET_URL=https://4get.ca
 EXPOSE 8000
 
 # Execute the script normally
-ENTRYPOINT ["python", "-m", "mcp_4get"]
+ENTRYPOINT ["python", "-m", "mcp-4get"]
