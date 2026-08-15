@@ -16,5 +16,5 @@ ENV FOURGET_URL=https://4get.ca
 # Expose the network port FastMCP is listening on
 EXPOSE 8000
 
-# FIX: Invoke the module package directly from the python runtime path
-ENTRYPOINT ["python", "-m", "mcp_4get"]
+# FIX: Invoke the newly compiled binary directly by name
+ENTRYPOINT ["mcp-4get"]
