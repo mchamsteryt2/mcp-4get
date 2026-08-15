@@ -3,18 +3,16 @@ FROM python:3.13-slim
 
 WORKDIR /app
 
-# Optimize layer caching for dependencies
 COPY pyproject.toml README.md ./
 COPY . .
 
-# Install your local modified fork
-RUN pip install --no-cache-dir .
-
-# Default configuration settings
+# FIX: Inject the missing local user binary path into the system PATH
+ENV PATH="/root/.local/bin:$PATH"
 ENV FOURGET_URL=https://4get.ca
 
-# Expose the network port FastMCP is listening on
+# Force an explicit global installation layout
+RUN pip install --no-cache-dir .
+
 EXPOSE 8000
 
-# FIX: Invoke the newly compiled binary directly by name
 ENTRYPOINT ["mcp-4get"]
