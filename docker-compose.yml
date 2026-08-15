@@ -1,6 +1,6 @@
 services:
     mcp-4get:
-        image: ghcr.io/your-username/your-fork-name:latest
+        image: ghcr.io/mchamsteryt2/mcp-4get:latest
         ports:
             - 8000:8000
         container_name: remote-mcp-4get
