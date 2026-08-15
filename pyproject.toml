@@ -1,7 +1,7 @@
 [project]
 dependencies = ["fastmcp>=2.12.3"]
 description = "An MCP server for 4get search engine"
-name = "mcp_4get"
+name = "mcp-4get"
 readme = "README.md"
 requires-python = ">=3.13"
 version = "0.1.2"
